@@ -47,4 +47,14 @@ public class GrupoEmpresas {
     public static List<Empresa> getEmpresas() {
         return empresas;
     }
+
+    public static Empresa getEmpresa(long id) {
+        for(Empresa emp: getEmpresas()) {
+            if (emp.getId() == id) {
+                return emp;
+            }
+        }
+
+        return null;
+    }
 }
