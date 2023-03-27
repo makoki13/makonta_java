@@ -1,10 +1,11 @@
 package com.makokienterprises.makonta.libros;
 
 import com.makokienterprises.makonta.cuentas.Cuenta;
+import com.makokienterprises.makonta.interfaces.IPersistencia;
 
 import java.util.Date;
 
-public class Apunte {
+public class Apunte implements IPersistencia {
     private Asiento asiento;
     private int cardinal;
 
@@ -35,5 +36,20 @@ public class Apunte {
 
     public Cuenta getCuenta() {
         return cuenta;
+    }
+
+    @Override
+    public boolean inserta() {
+        return false;
+    }
+
+    @Override
+    public boolean actualiza() {
+        return false;
+    }
+
+    @Override
+    public boolean borra() {
+        return false;
     }
 }

@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="785f59b0-55be-4601-b25c-c92adf7d074f" name="Changes" comment="Primer Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/TestApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/TestAsiento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/cuentas/Cuenta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/cuentas/Ejercicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/cuentas/PGC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/libros/Apunte.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/libros/Asiento.java" afterDir="false" />
+    <list default="true" id="785f59b0-55be-4601-b25c-c92adf7d074f" name="Changes" comment="Pruebas de clases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/empresa/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/empresa/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/empresa/Factoria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/grupoEmpresas/GrupoEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/grupoEmpresas/GrupoEmpresas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/grupoEmpresas/GrupoEmpresasApp.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,12 +113,20 @@
       <option name="project" value="LOCAL" />
       <updated>1678953939675</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Pruebas de clases">
+      <created>1679680574952</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679680574952</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primer Commit" />
+    <MESSAGE value="Pruebas de clases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pruebas de clases" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,12 +1,13 @@
 package com.makokienterprises.makonta.libros;
 
 import com.makokienterprises.makonta.cuentas.Ejercicio;
+import com.makokienterprises.makonta.interfaces.IPersistencia;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Asiento {
+public class Asiento implements IPersistencia {
     private static long ultimoId;
 
     static {
@@ -23,6 +24,21 @@ public class Asiento {
     private int ordinalApunte = 0;
     private List<Apunte> apuntes;
 
+    @Override
+    public boolean inserta() {
+        return false;
+    }
+
+    @Override
+    public boolean actualiza() {
+        return false;
+    }
+
+    @Override
+    public boolean borra() {
+        return false;
+    }
+
     public enum Diario {
         DEBE,
         HABER
@@ -38,6 +54,7 @@ public class Asiento {
     public void addApunte(Apunte apunte) {
         apunte.setCardinal(++ordinalApunte);
         this.apuntes.add(apunte);
+        apunte.inserta();
     }
 
     public List<Apunte> apuntes() {
