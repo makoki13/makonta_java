@@ -25,9 +25,20 @@ public class TestAsiento {
         Apunte apunte1 = new Apunte(cuenta1, 600.0, Asiento.Diario.DEBE,"Ingreso en banco");
         Apunte apunte2 = new Apunte(cuenta2,600.0, Asiento.Diario.HABER,"Sacar de caja");
 
+        Cuenta cuenta3 = empresa.getPlanContable().getCuenta("102");
+
+        Apunte apunte3 = new Apunte(cuenta3, 50.0, Asiento.Diario.DEBE,"Impuestos");
+        Apunte apunte4 = new Apunte(cuenta2,50.0, Asiento.Diario.HABER,"Sacar de caja");
+
         Asiento asiento = new Asiento(ejercicio,new Date());
         asiento.addApunte(apunte1);
         asiento.addApunte(apunte2);
+        asiento.addApunte(apunte3);
+        asiento.addApunte(apunte4);
+
+        //asiento.borraApunte(apunte4.getCardinal());
+
+
 
         System.out.println("DEBE:");
         for(Apunte apunte: asiento.apuntesEnDebe()) {
@@ -66,6 +77,11 @@ public class TestAsiento {
         cuenta2.setCodigo("101");
         cuenta2.setNombre("Fondo Social");
         planContable.addCuenta(cuenta2);
+
+        Cuenta cuenta3 = new Cuenta();
+        cuenta3.setCodigo("102");
+        cuenta3.setNombre("Impuestos");
+        planContable.addCuenta(cuenta3);
 
         empresa.setPlanContable(planContable);
         GrupoEmpresas.addEmpresa(empresa);

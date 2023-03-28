@@ -1,11 +1,11 @@
 package com.makokienterprises.makonta.libros;
 
 import com.makokienterprises.makonta.cuentas.Cuenta;
-import com.makokienterprises.makonta.interfaces.IPersistencia;
+import com.makokienterprises.makonta.persistencia.ApuntePersistencia;
 
 import java.util.Date;
 
-public class Apunte implements IPersistencia {
+public class Apunte extends ApuntePersistencia {
     private Asiento asiento;
     private int cardinal;
 
@@ -26,6 +26,10 @@ public class Apunte implements IPersistencia {
         this.cardinal = cardinal;
     }
 
+    public int getCardinal() {
+        return cardinal;
+    }
+
     public Asiento.Diario getPosicion() {
         return this.posicion;
     }
@@ -38,18 +42,5 @@ public class Apunte implements IPersistencia {
         return cuenta;
     }
 
-    @Override
-    public boolean inserta() {
-        return false;
-    }
 
-    @Override
-    public boolean actualiza() {
-        return false;
-    }
-
-    @Override
-    public boolean borra() {
-        return false;
-    }
 }

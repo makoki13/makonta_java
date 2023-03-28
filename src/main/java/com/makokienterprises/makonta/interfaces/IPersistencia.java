@@ -1,7 +1,7 @@
 package com.makokienterprises.makonta.interfaces;
 
 public interface IPersistencia {
-    public boolean inserta();
+    boolean inserta();
 
     public boolean actualiza();
 

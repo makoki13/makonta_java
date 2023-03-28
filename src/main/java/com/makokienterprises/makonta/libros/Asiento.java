@@ -1,13 +1,13 @@
 package com.makokienterprises.makonta.libros;
 
 import com.makokienterprises.makonta.cuentas.Ejercicio;
-import com.makokienterprises.makonta.interfaces.IPersistencia;
+import com.makokienterprises.makonta.persistencia.AsientoPersistencia;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Asiento implements IPersistencia {
+public class Asiento extends AsientoPersistencia {
     private static long ultimoId;
 
     static {
@@ -24,21 +24,6 @@ public class Asiento implements IPersistencia {
     private int ordinalApunte = 0;
     private List<Apunte> apuntes;
 
-    @Override
-    public boolean inserta() {
-        return false;
-    }
-
-    @Override
-    public boolean actualiza() {
-        return false;
-    }
-
-    @Override
-    public boolean borra() {
-        return false;
-    }
-
     public enum Diario {
         DEBE,
         HABER
@@ -49,16 +34,18 @@ public class Asiento implements IPersistencia {
         this.ejercicio = ejercicio;
         this.fecha = fecha;
         this.apuntes = new ArrayList<>();
+
+        this.inserta();
+    }
+
+    public List<Apunte> apuntes() {
+        return this.apuntes;
     }
 
     public void addApunte(Apunte apunte) {
         apunte.setCardinal(++ordinalApunte);
         this.apuntes.add(apunte);
         apunte.inserta();
-    }
-
-    public List<Apunte> apuntes() {
-        return this.apuntes;
     }
 
     public List<Apunte> apuntesEnDebe() {
@@ -103,5 +90,17 @@ public class Asiento implements IPersistencia {
 
     public boolean estaCuadrado() {
         return this.saldoDebe() == this.saldoHaber();
+    }
+
+    public boolean borraApunte(int cardinal) {
+        for(Apunte apunte: this.apuntes()) {
+            if (apunte.getCardinal() == cardinal) {
+                apunte.borra();
+                this.apuntes.remove(apunte);
+                return true;
+            }
+        }
+
+        return false;
     }
 }
