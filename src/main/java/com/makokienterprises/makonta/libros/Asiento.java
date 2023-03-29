@@ -35,7 +35,7 @@ public class Asiento extends AsientoPersistencia {
         this.fecha = fecha;
         this.apuntes = new ArrayList<>();
 
-        this.inserta();
+        //this.inserta();
     }
 
     public List<Apunte> apuntes() {

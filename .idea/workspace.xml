@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="785f59b0-55be-4601-b25c-c92adf7d074f" name="Changes" comment="Pruebas de interfaces">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/interfaces/Direccion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/interfaces/OrdenableApunte.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/interfaces/PaginableApunte.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/persistencia/ApuntePersistencia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/persistencia/AsientoPersistencia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/persistencia/CuentaPersistencia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/persistencia/EjercicioPersistencia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/persistencia/EmpresaPersistencia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/persistencia/GrupoEmpresasPersistencia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/persistencia/PgcPersistencia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/TestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/TestApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/TestAsiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/TestAsiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/cuentas/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/cuentas/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/cuentas/Ejercicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/cuentas/Ejercicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/cuentas/PGC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/cuentas/Pgc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/empresa/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/empresa/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/grupoEmpresas/GrupoEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/grupoEmpresas/GrupoEmpresas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/interfaces/Direccion.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/interfaces/IPersistencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/interfaces/IPersistencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/libros/Apunte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/libros/Apunte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/interfaces/OrdenableApunte.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/interfaces/PaginableApunte.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/libros/Asiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/makokienterprises/makonta/libros/Asiento.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +68,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.makokienterprises.makonta.persistencia" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.TestAsiento">
     <configuration name="GrupoEmpresasApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.makokienterprises.makonta.grupoEmpresas.GrupoEmpresasApp" />

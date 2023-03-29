@@ -1,16 +1,29 @@
 package com.makokienterprises.makonta.cuentas;
 
-import com.makokienterprises.makonta.empresa.Empresa;
+import com.makokienterprises.makonta.persistencia.PgcPersistencia;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PGC {
-    private List<Cuenta> planGeneralContable = new ArrayList<>();
-    private byte numeroDigitos = 14;
+public class Pgc extends PgcPersistencia {
+    private static int ultimaEmpresa;
+    static {
+        ultimaEmpresa = 0 ; //TODO get from database
+    }
 
-    public PGC( byte numeroDigitos) {
+    private long id;
+    private List<Cuenta> planGeneralContable = new ArrayList<>();
+    private byte numeroDigitos;
+
+    public Pgc() {
+        this((byte)14);
+    }
+
+    public Pgc(byte numeroDigitos) {
+        this.id = ++numeroDigitos;
         this.numeroDigitos = numeroDigitos;
+
+        //this.inserta();
     }
 
     public void addCuenta(Cuenta cuenta) {

@@ -1,6 +1,8 @@
 package com.makokienterprises.makonta.cuentas;
 
-public class Cuenta {
+import com.makokienterprises.makonta.persistencia.CuentaPersistencia;
+
+public class Cuenta extends CuentaPersistencia {
     private static long ultimoId = 0;
     private long id;
     private String codigo;

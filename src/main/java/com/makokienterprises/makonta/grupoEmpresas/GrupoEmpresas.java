@@ -1,22 +1,30 @@
 package com.makokienterprises.makonta.grupoEmpresas;
 
 import com.makokienterprises.makonta.empresa.Empresa;
+import com.makokienterprises.makonta.interfaces.IPersistencia;
+import com.makokienterprises.makonta.persistencia.GrupoEmpresasPersistencia;
 
 import java.util.*;
 
-public class GrupoEmpresas {
-    private static int id;
+public class GrupoEmpresas extends GrupoEmpresasPersistencia {
+    private static long ultimoId;
+
+    static {
+        ultimoId = 0;
+    }
+    private static long id;
     private static String nombre;
 
     private static List<Empresa> empresas = new ArrayList<Empresa>();
 
 
-    public static void inicializa(int idGrupo, String nombreGrupo) {
-        id = idGrupo;
+    public static void inicializa(String nombreGrupo) {
+        id = ++ultimoId;
         nombre = nombreGrupo;
+        //GrupoEmpresas.inserta();
     }
 
-    public static int getId() {
+    public static long getId() {
         return id;
     }
 

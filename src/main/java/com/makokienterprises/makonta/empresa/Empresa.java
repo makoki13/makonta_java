@@ -1,9 +1,10 @@
 package com.makokienterprises.makonta.empresa;
 
 import com.makokienterprises.makonta.cuentas.Ejercicio;
-import com.makokienterprises.makonta.cuentas.PGC;
+import com.makokienterprises.makonta.cuentas.Pgc;
+import com.makokienterprises.makonta.persistencia.EmpresaPersistencia;
 
-public class Empresa {
+public class Empresa extends EmpresaPersistencia {
     private static int ultimaEmpresa;
     static {
         ultimaEmpresa = 0 ; //TODO get from database
@@ -13,12 +14,14 @@ public class Empresa {
 
     //datos del plan contable.
     private Ejercicio ejercicioActual;
-    private PGC planContable;
+    private Pgc planContable;
 
     public Empresa() {
         this.id = ++ultimaEmpresa;
         this.nombre = "Sin nombre";
         this.ejercicioActual = null;
+
+        //this.inserta();
     }
     public Empresa(int id, String nombre, Ejercicio ejercicioActual) {
         this.id = id;
@@ -52,10 +55,10 @@ public class Empresa {
         this.ejercicioActual = ejercicioActual;
     }
 
-    public void setPlanContable(PGC planContable) {
+    public void setPlanContable(Pgc planContable) {
         this.planContable = planContable;
     }
-    public PGC getPlanContable() {
+    public Pgc getPlanContable() {
         return this.planContable;
     }
 

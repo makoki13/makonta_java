@@ -2,7 +2,7 @@ package com.makokienterprises.makonta;
 
 import com.makokienterprises.makonta.cuentas.Cuenta;
 import com.makokienterprises.makonta.cuentas.Ejercicio;
-import com.makokienterprises.makonta.cuentas.PGC;
+import com.makokienterprises.makonta.cuentas.Pgc;
 import com.makokienterprises.makonta.empresa.Empresa;
 import com.makokienterprises.makonta.grupoEmpresas.GrupoEmpresas;
 
@@ -14,7 +14,7 @@ public class TestApp {
         Empresa empresa = new Empresa();
         empresa.setNombre("Empresa 1");
         empresa.setEjercicioActual(ejercicio);
-        PGC planContable = new PGC((byte) 14);
+        Pgc planContable = new Pgc((byte) 14);
 
         Cuenta cuenta1 = new Cuenta();
         cuenta1.setCodigo("100");
@@ -33,7 +33,7 @@ public class TestApp {
         Empresa empresa2 = new Empresa();
         empresa2.setNombre("Empresa 2");
         empresa2.setEjercicioActual(ejercicio2);
-        PGC planContable2 = new PGC((byte) 10);
+        Pgc planContable2 = new Pgc((byte) 10);
 
         Cuenta cuenta3 = new Cuenta();
         cuenta3.setCodigo("100");

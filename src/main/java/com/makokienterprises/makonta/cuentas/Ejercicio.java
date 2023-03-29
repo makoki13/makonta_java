@@ -1,8 +1,9 @@
 package com.makokienterprises.makonta.cuentas;
 
 import com.makokienterprises.makonta.empresa.Empresa;
+import com.makokienterprises.makonta.persistencia.EjercicioPersistencia;
 
-public class Ejercicio {
+public class Ejercicio extends EjercicioPersistencia {
     private static int ultimaEmpresa;
     static {
         ultimaEmpresa = 0 ; //TODO get from database
@@ -19,6 +20,8 @@ public class Ejercicio {
         this.activo = false;
         this.cerrado = false;
         this.prueba = false;
+
+       //this.inserta();
     }
 
     public int getAnyo() {

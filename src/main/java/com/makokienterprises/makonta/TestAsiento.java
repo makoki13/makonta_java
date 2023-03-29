@@ -2,14 +2,13 @@ package com.makokienterprises.makonta;
 
 import com.makokienterprises.makonta.cuentas.Cuenta;
 import com.makokienterprises.makonta.cuentas.Ejercicio;
-import com.makokienterprises.makonta.cuentas.PGC;
+import com.makokienterprises.makonta.cuentas.Pgc;
 import com.makokienterprises.makonta.empresa.Empresa;
 import com.makokienterprises.makonta.grupoEmpresas.GrupoEmpresas;
 import com.makokienterprises.makonta.libros.Apunte;
 import com.makokienterprises.makonta.libros.Asiento;
 
 import java.util.Date;
-import java.util.List;
 
 public class TestAsiento {
     static {
@@ -62,25 +61,31 @@ public class TestAsiento {
     }
 
     private static void cargaSimulada() {
+        GrupoEmpresas grupo = new GrupoEmpresas();
+        grupo.inicializa("Makoki Enterprises");
+
         Ejercicio ejercicio = new Ejercicio(2023);
         Empresa empresa = new Empresa();
         empresa.setNombre("Empresa 1");
         empresa.setEjercicioActual(ejercicio);
-        PGC planContable = new PGC((byte) 14);
+        Pgc planContable = new Pgc((byte) 14);
 
         Cuenta cuenta1 = new Cuenta();
         cuenta1.setCodigo("100");
         cuenta1.setNombre("Capital Social");
+        cuenta1.inserta();
         planContable.addCuenta(cuenta1);
 
         Cuenta cuenta2 = new Cuenta();
         cuenta2.setCodigo("101");
         cuenta2.setNombre("Fondo Social");
+        cuenta2.inserta();
         planContable.addCuenta(cuenta2);
 
         Cuenta cuenta3 = new Cuenta();
         cuenta3.setCodigo("102");
         cuenta3.setNombre("Impuestos");
+        cuenta3.inserta();
         planContable.addCuenta(cuenta3);
 
         empresa.setPlanContable(planContable);
